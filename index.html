@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Go'Bike</title>
+    <link href="https://fonts.googleapis.com/css?family=Righteous&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+        integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+        crossorigin="" />
+</head>
+
+<body>
+    <header>
+        <div id="bandeau">
+            <div id="logo">
+                <img src="images/logo-velov.png" alt="logo vélov">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="">Accueil</a></li>
+                    <li><a href="">La carte</a></li>
+                    <li><a href="">Mes réservations</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section id="slider">
+        <figure>
+            <img src="images/img1.jpg" alt="">
+            <figcaption>Besoin d'un vélo ? Rien de plus simple ! </figcaption>
+        </figure>
+        <figure>
+            <img src="images/img2.jpg" alt="">
+            <figcaption> 1 - Choisissez votre station sur la carte </figcaption>
+        </figure>
+        <figure>
+            <img src="images/img3.jpg" alt="">
+            <figcaption> 2 - Remplissez et signez le formulaire</figcaption>
+        </figure>
+        <figure>
+            <img src="images/img4.jpg" alt="">
+            <figcaption> 3 - Profitez de votre vélo !</figcaption>
+        </figure>
+        <a class="previous"><i class="fas fa-chevron-left chevron img_gauche"></i></a>
+        <a class="next"><i class="fas fa-chevron-right chevron img_droite"></i></a>
+        <a class="playpause"><i class="fas fa-play "></i></a>
+    </section>
+    <section id="section_carte">
+        <div id="map_header">
+            <h2> La Carte</h2>
+            <p> Selectionnez votre station, et réservez votre vélo</p>
+        </div>
+        <div id="map_container">
+            <div id="map">
+
+            </div>
+            <div id="reservation">
+                <h1 id="nom_station"></h1>
+                <p id="adresse_station"></p>
+                <p id="nombre_places"></p>
+                <p id="nombre_velos"></p>
+                <div class="name_resa">
+                    <label for="prénom_résa">Prénom :</label>
+                    <input type="text" name="prénom_résa" placeholder="Prénom" id="input_prenom" />
+                </div>
+                <div class="name_resa"> <label for="nom_résa">Nom :</label>
+                    <input type="text" name="nom_résa" placeholder="Nom" id="input_nom">
+                </div>
+                <div id="confirmation_resa">
+                    <p>Veuillez signer pour confirmer la réservation</p>
+                </div>
+                <div id="div_canvas">
+                    <canvas id="canvas_signature">
+                    </canvas>
+
+                </div>
+                <a id="bouton_résa" href="#recap_reservation">
+                    Réserver
+                </a>
+                <span id="close_resa"><i class="fas fa-times"></i></span>
+            </div>
+        </div>
+        <div id="recap_reservation">
+            <h2 id="titre_recap">Ma réservation :</h2>
+            <p id="recap_texte"></p>
+            <p id="recap_timer"></p>
+            <button id="annulation">Annuler ma réservation</button>
+        </div>
+    </section>
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+        integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+        crossorigin=""></script>
+    <script src="https://unpkg.com/leaflet.markercluster@1.4.1/dist/"></script>
+    <script src="https://kit.fontawesome.com/2162989373.js"></script>
+    <script src="js/slider.js"></script>
+    <script src="js/ajax.js"></script>
+    <script src="js/map.js"></script>
+</body>
+
+</html>
