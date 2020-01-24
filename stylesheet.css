@@ -269,3 +269,31 @@ input {
         padding-top: 10em; 
         margin-top: -10em; 
     }
+
+#recap_texte {
+    width: 65%;
+    background-color: gray;
+    display: inline-block;
+    padding: 8px;
+    border: solid 1px white;
+    border-radius: 5px;
+}
+
+#recap_timer {
+    background-color: gray;
+}
+
+#annulation {
+    background-color: #FC2E2E;
+    width: 20%;
+    text-align: center;
+    padding: 8px;
+    border: solid gray 1px;
+    cursor: pointer;
+    margin-bottom: 5px;
+}
+#annulation:hover {
+    background-color: #E72828;
+    border: solid white 1px;
+    padding: 8.5px;
+}
