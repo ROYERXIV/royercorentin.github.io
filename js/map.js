@@ -32,6 +32,7 @@ class Map {
                     voletResa.style.opacity = "1";
                     voletResa.style.right = "0";
                     voletResa.style.height = "80vh";
+                    voletResa.style.display = "flex";
                     document.querySelector("#nom_station").innerText = "Station " + station.name;
                     document.querySelector("#adresse_station").innerHTML = " Adresse : " + station.address;
                     document.querySelector("#nombre_places").innerText = station.available_bike_stands + " emplacements disponibles !";
