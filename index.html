@@ -63,25 +63,32 @@
                 <p id="adresse_station"></p>
                 <p id="nombre_places"></p>
                 <p id="nombre_velos"></p>
-                <div class="name_resa">
-                    <label for="prénom_résa">Prénom :</label>
-                    <input type="text" name="prénom_résa" placeholder="Prénom" id="input_prenom" />
-                </div>
-                <div class="name_resa"> <label for="nom_résa">Nom :</label>
-                    <input type="text" name="nom_résa" placeholder="Nom" id="input_nom">
+                <div id="infos_resa">
+                    <div class="name_resa">
+                        <label for="prénom_résa">Prénom :</label>
+                        <input type="text" name="prénom_résa" placeholder="Prénom" id="input_prenom" />
+                    </div>
+                    <div class="name_resa"> <label for="nom_résa">Nom :</label>
+                        <input type="text" name="nom_résa" placeholder="Nom" id="input_nom">
+                    </div>
                 </div>
                 <div id="confirmation_resa">
                     <p>Veuillez signer pour confirmer la réservation</p>
-                </div>
-                <div id="div_canvas">
-                    <canvas id="canvas_signature">
-                    </canvas>
 
+                    <div id="div_canvas">
+                        <canvas id="canvas_signature">
+                        </canvas>
+
+                    </div>
+                    <a id="bouton_confirmation">Confirmer la réservation</a>
                 </div>
                 <a id="bouton_résa" href="#recap_reservation">
                     Réserver
                 </a>
                 <span id="close_resa"><i class="fas fa-times"></i></span>
+                <div id="reservation_en_cours">
+                    <p>Une réservation est en cours. Vous pouvez l'annuler a tout moment.</p>
+                </div>
             </div>
         </div>
         <div id="recap_reservation">

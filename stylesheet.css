@@ -199,13 +199,17 @@ label {
 }
 
 
-
-#reservation>div {
+#infos_resa{
+    width: 100%;
+}
+.name_resa {
     display: flex;
     text-align: left;
     width: 70%;
     padding-top: 5px;
+    margin: 0 auto;
 }
+
 
 #nom_station {
     padding-top: 10px;
@@ -226,7 +230,7 @@ input {
 }
 
 #div_canvas {
-    width: 10%;
+    width: 100%;
     justify-content: center;
 }
 
@@ -245,10 +249,11 @@ input {
 }
  
 #confirmation_resa {
-    display: none !important;
+    display: none;
 }
-#button_confirmation {
-    display: none !important;
+
+#reservation_en_cours {
+    display : none;
 }
 
 #recap_reservation {
