@@ -68,7 +68,7 @@ class Reservation {
         this.recapTexte = document.getElementById('recap_texte');
         this.recapPrenom = localStorage.getItem('inputFirstName');
         this.recapNom = localStorage.getItem('inputName');
-        this.recapTexte.innerText = " Vous avez reservé un vélo a la Station : " + this.recupStation + " " + "Au nom de :" + " " + this.recapPrenom + " " + this.recapNom;
+        this.recapTexte.innerHTML = " Vous avez reservé un vélo a la Station : " + this.recupStation + " " + "Au nom de :" + " " + this.recapPrenom + " " + this.recapNom;
         this.recapTexte.style.background = "#2D9A29";
     }
     startTimer() {

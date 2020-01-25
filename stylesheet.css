@@ -297,3 +297,41 @@ input {
     border: solid white 1px;
     padding: 8.5px;
 }
+
+@media screen and (max-width: 1090px){
+  
+    #bandeau nav {
+        display: none;
+    }
+
+    #logo {
+        width: 100%;
+        margin: 0;
+        text-align: center;
+    }
+
+    #logo img {
+        margin: 0 auto;
+    }
+
+    #reservation {
+        width: 100%;
+    }
+    
+    #recap_reservation {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 600px){
+    figcaption {
+        font-size: 6.5vw;
+    }
+
+    #recap_texte {
+        width: 90%;
+    }
+    #annulation {
+        width: 50%;
+    }
+}
