@@ -28,7 +28,6 @@ class Map {
                     // Volet des réservations
                     const voletResa = document.getElementById("reservation");
                     // document.querySelector("#map").style.width = "70%";
-                    voletResa.style.width = "30%";
                     voletResa.style.opacity = "1";
                     voletResa.style.right = "0";
                     voletResa.style.height = "80vh";

@@ -40,7 +40,6 @@ class Reservation {
             alert("Réservation annulée!");
         });
         this.closeResa.addEventListener("click", () => {
-            this.voletResa.style.width = "0";
             this.voletResa.style.opacity = "0";
             this.voletResa.style.right = "0";
             this.voletResa.style.height = "0";
