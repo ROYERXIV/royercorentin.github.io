@@ -201,6 +201,7 @@ class Reservation {
             const x = e.touches[0].clientX - rect.x;
             const y = e.touches[0].clientY - rect.y;
             this.draw = true;
+            event.preventDefault();
             this.ctx.beginPath();
             this.ctx.moveTo(x, y);
 
@@ -211,12 +212,14 @@ class Reservation {
                 const x = e.touches[0].clientX - rect.x;
                 const y = e.touches[0].clientY - rect.y;
                 this.isSigned = true;
+                event.preventDefault();
                 this.ctx.lineTo(x, y);
                 this.ctx.stroke();
             }
         });
         this.canvas.addEventListener('touchend', () => {
             this.draw = false;
+            event.preventDefault();
             this.ctx.closePath();
         });
     }
