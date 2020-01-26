@@ -199,9 +199,11 @@ label {
 }
 
 
-#infos_resa{
+#infos_resa {
     width: 100%;
+    margin-bottom: 15px;
 }
+
 .name_resa {
     display: flex;
     text-align: left;
@@ -215,7 +217,7 @@ label {
     padding-top: 10px;
 }
 
-.name_resa label{
+.name_resa label {
     width: 30%;
 }
 
@@ -232,6 +234,7 @@ input {
 #div_canvas {
     width: 100%;
     justify-content: center;
+    margin-bottom: 30px;
 }
 
 
@@ -247,13 +250,14 @@ input {
 #close_resa:hover {
     color: white;
 }
- 
+
 #confirmation_resa {
     display: none;
 }
 
+
 #reservation_en_cours {
-    display : none;
+    display: none;
 }
 
 #recap_reservation {
@@ -266,9 +270,9 @@ input {
 }
 
 #recap_reservation.target {
-        padding-top: 10em; 
-        margin-top: -10em; 
-    }
+    padding-top: 10em;
+    margin-top: -10em;
+}
 
 #recap_texte {
     width: 65%;
@@ -292,14 +296,15 @@ input {
     cursor: pointer;
     margin-bottom: 5px;
 }
+
 #annulation:hover {
     background-color: #E72828;
     border: solid white 1px;
     padding: 8.5px;
 }
 
-@media screen and (max-width: 1090px){
-  
+@media screen and (max-width: 1090px) {
+
     #bandeau nav {
         display: none;
     }
@@ -317,20 +322,32 @@ input {
     #reservation {
         width: 100%;
     }
-    
+
     #recap_reservation {
         width: 100%;
     }
 }
 
-@media screen and (max-width: 600px){
+@media screen and (max-width: 600px) {
     figcaption {
         font-size: 6.5vw;
     }
 
+    #reservation {
+        height: auto;
+        border-radius: 0;
+
+    }
+
+    #confirmation_resa {
+        padding-bottom: 30px;
+    }
+
+
     #recap_texte {
         width: 90%;
     }
+
     #annulation {
         width: 50%;
     }

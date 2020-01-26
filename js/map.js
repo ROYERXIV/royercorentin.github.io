@@ -21,7 +21,10 @@ class Map {
             for (let i = 0; i < stations.length; i++) {
                 const station = stations[i];
                 // console.log(station);
-                const marker = L.marker([station.position.lat, station.position.lng]).addTo(this.mymap);
+                const markers = L.markerClusterGroup();
+                const marker = L.marker([station.position.lat, station.position.lng]).addTo(markers);
+                markers.addLayer(marker);
+                this.mymap.addLayer(markers);
                 marker.station = station;
                 marker.addEventListener("click", (e) => {
                     console.log(station);

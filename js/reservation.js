@@ -42,7 +42,6 @@ class Reservation {
         this.closeResa.addEventListener("click", () => {
             this.voletResa.style.opacity = "0";
             this.voletResa.style.right = "0";
-            this.voletResa.style.height = "0";
             this.voletResa.style.display = "none";
 
         });
