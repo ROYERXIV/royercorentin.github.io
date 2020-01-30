@@ -68,7 +68,7 @@ class Reservation {
         this.recapTexte = document.getElementById('recap_texte');
         this.recapPrenom = localStorage.getItem('inputFirstName');
         this.recapNom = localStorage.getItem('inputName');
-        this.recapTexte.innerHTML = " Vous avez reservé un vélo a la Station : " + this.recupStation + "<br /> " + "Au nom de :" + " " + this.recapPrenom + " " + this.recapNom;
+        this.recapTexte.innerHTML = " Vous avez reservé un vélo a la Station : "+"<br />" + this.recupStation + "<br /> " + "Au nom de :" + " " + this.recapPrenom + " " + this.recapNom;
         this.recapTexte.style.background = "#2D9A29";
     }
     startTimer() {
@@ -100,7 +100,7 @@ class Reservation {
             this.recapPrenom = localStorage.getItem('inputFirstName');
             this.recapNom = localStorage.getItem('inputName');
             this.sessionStation = sessionStorage.getItem("sessionStation");
-            this.recapTexte.innerHTML = " Vous avez reservé un vélo a la Station : " + this.sessionStation + "<br/>" + "Au nom de :" + " " + this.recapPrenom + " " + this.recapNom;
+            this.recapTexte.innerHTML = " Vous avez reservé un vélo a la Station : " +"<br />"+ this.sessionStation + "<br/>" + "Au nom de :" + " " + this.recapPrenom + " " + this.recapNom;
             this.recapTexte.style.background = "#2D9A29";
             this.annulationBouton.style.display = "inline-block";
             this.start = sessionStorage.getItem("start");

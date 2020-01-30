@@ -267,11 +267,7 @@ input {
     color: white;
     width: 50%;
     margin: auto;
-}
-
-#recap_reservation.target {
-    padding-top: 10em;
-    margin-top: -10em;
+    padding-bottom: 8px;
 }
 
 #recap_texte {
