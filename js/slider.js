@@ -90,7 +90,7 @@ class Diaporama {
 
 }
 // init slider
-const diaporama = new Diaporama("slider");
+
 
 // bouton play pause
 

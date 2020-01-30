@@ -53,6 +53,7 @@ class Reservation {
                 sessionStorage.removeItem("recupEndTimer");
                 this.divConfirmation.style.display = "none";
                 this.resaEnCours.style.display = "flex";
+                this.recapTimer.style.display = "block";
                 this.recupData();
                 this.startTimer();
                 this.annulationBouton.style.display = "inline-block";
@@ -67,7 +68,7 @@ class Reservation {
         this.recapTexte = document.getElementById('recap_texte');
         this.recapPrenom = localStorage.getItem('inputFirstName');
         this.recapNom = localStorage.getItem('inputName');
-        this.recapTexte.innerHTML = " Vous avez reservé un vélo a la Station : " + this.recupStation + " " + "Au nom de :" + " " + this.recapPrenom + " " + this.recapNom;
+        this.recapTexte.innerHTML = " Vous avez reservé un vélo a la Station : " + this.recupStation + "<br /> " + "Au nom de :" + " " + this.recapPrenom + " " + this.recapNom;
         this.recapTexte.style.background = "#2D9A29";
     }
     startTimer() {
@@ -107,6 +108,7 @@ class Reservation {
             this.divConfirmation.style.display = "none";
             this.boutonResa.style.display = "none";
             this.resaEnCours.style.display = "flex";
+            this.recapTimer.style.display = "block";
             console.log(this.start);
             this.intervalTimer = setInterval(() => {
                 this.now = (new Date()).getTime();
@@ -129,7 +131,7 @@ class Reservation {
 
     resaTimeOut() {
         alert("Votre réservation a expiré");
-        this.divTimer.innerText = "";
+        this.divTimer.innerText = null;
         this.recapText.innerText = " Votre reservation a expiré.";
         this.recapTexte.style.background = "gray";
         this.annulationBouton.style.display = "none";
@@ -137,12 +139,13 @@ class Reservation {
         this.divConfirmation.style.display = "none";
         this.divInfos.style.display = "block";
         this.boutonResa.style.display = "block";
+        this.recapTimer.style.display = "none";
     }
 
     annulationResa() {
         clearInterval(this.intervalTimer);
         sessionStorage.removeItem("start");
-        this.divTimer.innerText = " ";
+        this.divTimer.innerText = null;
         this.recapText.innerText = "Vous n'avez pas de réservation pour le moment.";
         this.recapTexte.style.background = "gray";
         this.annulationBouton.style.display = "none";
@@ -150,6 +153,7 @@ class Reservation {
         this.divConfirmation.style.display = "none";
         this.divInfos.style.display = "block";
         this.boutonResa.style.display = "block";
+        this.recapTimer.style.display = "none";
 
 
     }
@@ -225,4 +229,3 @@ class Reservation {
 
 }
 
-const classResa = new Reservation();

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
     <meta charset="UTF-8">
@@ -11,10 +11,8 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
         integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
         crossorigin="" />
-    <link  rel="stylesheet" src="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.css">
-    </link>
-    <link rel="stylesheet" src="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.Default.css">
-    </link>
+    <link  rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.Default.css" />
 </head>
 
 <body>
@@ -69,10 +67,10 @@
                 <p id="nombre_velos"></p>
                 <div id="infos_resa">
                     <div class="name_resa">
-                        <label for="prénom_résa">Prénom :</label>
+                        <label for="input_prenom">Prénom :</label>
                         <input type="text" name="prénom_résa" placeholder="Prénom" id="input_prenom" />
                     </div>
-                    <div class="name_resa"> <label for="nom_résa">Nom :</label>
+                    <div class="name_resa"> <label for="input_nom">Nom :</label>
                         <input type="text" name="nom_résa" placeholder="Nom" id="input_nom">
                     </div>
                 </div>
@@ -89,6 +87,7 @@
                 <a id="bouton_résa">
                     Réserver
                 </a>
+                <!-- <p id="plus_de_velos">Aucun vélo disponible, réservation impossible</p> -->
                 <span id="close_resa"><i class="fas fa-times"></i></span>
                 <div id="reservation_en_cours">
                     <p>Une réservation est en cours. Vous pouvez l'annuler a tout moment.</p>
@@ -111,6 +110,7 @@
     <script src="js/ajax.js"></script>
     <script src="js/map.js"></script>
     <script src="js/reservation.js"></script>
+    <script src="js/start.js"></script>
 </body>
 
 </html>

@@ -13,6 +13,8 @@ class Map {
             id: 'mapbox/streets-v11',
             accessToken: 'sk.eyJ1IjoicHJveWVyY29yZW50aW45MSIsImEiOiJjazRuNjQyamcxeDA5M2tudGp2djh3bXdoIn0.K2ZMWcnLfoeBnkjxiZNrCQ'
         }).addTo(this.mymap);
+        this.markerCluster = L.markerClusterGroup();
+        this.mymap.addLayer(this.markerCluster);
     }
     // Chargement des stations
     loadStations(url) {
@@ -21,10 +23,9 @@ class Map {
             for (let i = 0; i < stations.length; i++) {
                 const station = stations[i];
                 // console.log(station);
-                const markers = L.markerClusterGroup();
-                const marker = L.marker([station.position.lat, station.position.lng]).addTo(markers);
-                markers.addLayer(marker);
-                this.mymap.addLayer(markers);
+
+                const marker = L.marker([station.position.lat, station.position.lng]);
+                this.markerCluster.addLayer(marker);
                 marker.station = station;
                 marker.addEventListener("click", (e) => {
                     console.log(station);
@@ -45,9 +46,4 @@ class Map {
     }
 }
 
-const map = new Map(
-    "map",
-    "https://api.jcdecaux.com/vls/v1/stations?contract=lyon&apiKey=b9a75eec8dfb55eeb8a042bbe5fb64d270f667c7",
-    45.76,
-    4.84,
-    12.8);
+
