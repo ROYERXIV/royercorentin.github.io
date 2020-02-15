@@ -36,6 +36,7 @@ class Map {
                     voletResa.style.right = "0";
                     voletResa.style.height = "80vh";
                     voletResa.style.display = "flex";
+                    this.checkVelo(marker.station);
                     document.querySelector("#nom_station").innerText = "Station " + station.name;
                     document.querySelector("#adresse_station").innerHTML = " Adresse : " + station.address;
                     document.querySelector("#nombre_places").innerText = station.available_bike_stands + " emplacements disponibles !";
@@ -44,6 +45,20 @@ class Map {
             }
         });
     }
+    checkVelo(station) {
+        const plusDeVelo = document.getElementById("plus_de_velos");
+        const boutonResa = document.getElementById("bouton_résa");
+        const infosResa = document.getElementById("infos_resa");
+        if (station.available_bikes == 0) {
+            plusDeVelo.style.display = " block";
+            boutonResa.style.display = " none";
+            infosResa.style.display = " none";
+
+        } else {
+            plusDeVelo.style.display = " none";
+            boutonResa.style.display = " block";
+            infosResa.style.display = " block";
+        }
+
+    }
 }
-
-

@@ -1,10 +1,12 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" prefix="og: http://ogp.me/ns#">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta property="og:title" content="Go'Bike, le numéro 1 du vélo sur Lyon" />
+    <meta property="og:url" content="http://royercorentin.github.io" />
     <title>Go'Bike</title>
     <link href="https://fonts.googleapis.com/css?family=Righteous&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="stylesheet.css">
@@ -23,9 +25,9 @@
             </div>
             <nav>
                 <ul>
-                    <li><a href="">Accueil</a></li>
-                    <li><a href="">La carte</a></li>
-                    <li><a href="">Mes réservations</a></li>
+                    <li><a href="#">Accueil</a></li>
+                    <li><a href="#map_header">La carte</a></li>
+                    <li><a href="#recap_reservation">Mes réservations</a></li>
                 </ul>
             </nav>
         </div>
@@ -87,7 +89,7 @@
                 <a id="bouton_résa">
                     Réserver
                 </a>
-                <!-- <p id="plus_de_velos">Aucun vélo disponible, réservation impossible</p> -->
+                <div id="plus_de_velos"><p>Aucun vélo disponible, réservation impossible</p></div>
                 <span id="close_resa"><i class="fas fa-times"></i></span>
                 <div id="reservation_en_cours">
                     <p>Une réservation est en cours. Vous pouvez l'annuler a tout moment.</p>
@@ -99,6 +101,12 @@
             <p id="recap_texte"></p>
             <p id="recap_timer"></p>
             <a id="annulation">Annuler ma réservation</a>
+        </div>
+    </section>
+    <section>
+        <div id="footer">
+            <p id="fake_project">Ceci est un site fictif dans le cadre d'un projet pour Openclassrooms.</p>
+            <p id="rs"> Suivez nous sur les réseaux sociaux: <i class="fab fa-facebook-square"></i> <i class="fab fa-twitter-square"></i> <i class="fab fa-snapchat-square"></i></p>
         </div>
     </section>
     <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"

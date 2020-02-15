@@ -20,6 +20,11 @@ h2 {
     display: flex;
     border-bottom: solid 4px black;
     width: 100%;
+    position: fixed;
+    z-index: 9999;
+    background-color: white;
+    height: 99px;
+    top: 0;
 }
 
 #logo {
@@ -57,6 +62,7 @@ h2 {
 #slider {
     width: 100%;
     position: relative;
+    margin-top: 99px;
 }
 
 figure {
@@ -154,6 +160,10 @@ figcaption {
 #map {
     width: 100%;
     height: 80vh;
+}
+#map_header:target {
+    padding-top: 99px;
+    margin-top: -99px;
 }
 
 #reservation {
@@ -261,6 +271,14 @@ input {
     display: none;
 }
 
+#plus_de_velos {
+    display: none;
+    background-color: #FC2E2E;
+    padding: 5px;
+    border: solid 1px white;
+    border-radius: 5px;
+}
+
 #recap_reservation {
     text-align: center;
     background-color: #343A40;
@@ -268,6 +286,11 @@ input {
     width: 50%;
     margin: auto;
     padding-bottom: 8px;
+}
+
+#recap_reservation:target {
+    padding-top: 99px;
+    margin-top: -99px;
 }
 
 #recap_texte {
@@ -300,6 +323,19 @@ input {
     padding: 8.5px;
 }
 
+#footer {
+    background-color: #323437;
+    display: flex;
+    justify-content: space-between;
+}
+
+#footer p {
+    color: lightgray;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#rs {
+    
+}
 @media screen and (max-width: 1090px) {
 
     #bandeau nav {
@@ -328,6 +364,17 @@ input {
 @media screen and (max-width: 600px) {
     figcaption {
         font-size: 6.5vw;
+    }
+
+    .next{
+        display: none;
+    }
+    .previous{
+        display: none;
+    }
+
+    .playpause {
+        display: none;
     }
 
     #reservation {
