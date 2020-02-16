@@ -54,6 +54,7 @@ class Reservation {
                 this.divConfirmation.style.display = "none";
                 this.resaEnCours.style.display = "flex";
                 this.recapTimer.style.display = "block";
+                clearInterval(this.intervalTimer);
                 this.recupData();
                 this.startTimer();
                 this.annulationBouton.style.display = "inline-block";
